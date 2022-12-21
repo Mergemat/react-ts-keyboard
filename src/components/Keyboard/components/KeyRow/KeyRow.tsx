@@ -14,8 +14,7 @@ const KeyRow = ({ row, pressedSyms }: Props) => {
         return (
           <Key
             active={
-              pressedSyms.filter((pressed) => pressed == props.fkey.key)
-                .length != 0
+              pressedSyms.includes(props.fkey.key)
             }
             key={index}
             {...sym.props}
